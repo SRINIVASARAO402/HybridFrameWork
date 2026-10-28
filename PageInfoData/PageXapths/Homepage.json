@@ -1,0 +1,15 @@
+{
+    "XEmployeeLogo":"//img[@height='180']",
+    "XHeadingLogo":"//img[@height='67']",
+    "XHeadingText":"//font[@face='tahoma']",
+    "XUserName":"//input[@type='text']",
+    "XUserPassword":"//input[@type='password']",
+    "XLoginButton":"//input[@type='Submit']"
+
+    
+}
+
+
+ 
+
+

@@ -1,0 +1,15 @@
+{ 
+    "XRightImage":"div#rightHeaderImage",
+    "XFrame":"iframe#rightMenu",
+    "XID":"input#txtEmployeeId",
+    "XLastName":"input#txtEmpLastName",
+    "XFirstName":"input#txtEmpFirstName",
+    "XMiddleName":"input#txtEmpMiddleName",
+    "XNickName":"input#txtEmpNickName",
+    "XPhoto":"input#photofile",
+    "XSaveButton":"input#btnEdit"
+}
+
+
+
+

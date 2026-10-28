@@ -1,0 +1,77 @@
+
+import{expect, Page, Locator} from '@playwright/test'
+
+export class WebPage
+{
+    page : Page;
+
+    constructor(page : Page)
+    {
+        this.page = page;
+    }
+
+    async launchMyApp(url : string, mytitle : string)
+    {
+        await this.page.waitForTimeout(1000);
+        await this.page.goto(url);
+        expect(this.page).toHaveTitle(mytitle)
+    }
+    element(loc : string) : Locator
+    {
+      return  this.page.locator(loc)
+    }
+
+    async enterData(myloc : string, text : string)
+    {
+        await this.element(myloc).fill(text)
+        //await this.page.locator("//input...").fill("username/password")
+    }
+
+    async clickData(myloc : string)
+    {
+        await this.element(myloc).click();
+         //await this.page.locator("//input...").click()
+    }
+    //check the images
+    async checkLocator(myloc : string)
+    {
+        await expect(this.element(myloc)).toBeVisible()
+    }
+    //print the text
+    async getText(myloc : string)
+    {
+       console.log(await this.element(myloc).textContent()) 
+    }
+    //mouse hover
+    async elementHover(myloc : string)
+    {
+        await this.element(myloc).hover();
+        //await this.page.locator("myloc").hover();
+    }
+    
+    async enterDataFrame(floc : string , myloc : string , text : string)
+    {
+        await this.page.frameLocator(floc).locator(myloc).fill(text)
+    }
+
+    async clickDataFrame(floc : string, myloc : string)
+    {
+        await this.page.frameLocator(floc).locator(myloc).click();
+    }
+
+    async upLoadFrame(floc : string, myloc : string, filetext : string)
+    {
+        await this.page.frameLocator(floc).locator(myloc).setInputFiles(filetext);
+    }
+
+    async enterAllDataFrame(floc : string , idloc : string, firstloc : string , lastloc : string, midloc : string, nickloc : string, text : string)
+    {
+        await this.page.frameLocator(floc).locator(idloc).fill(text)
+        await this.page.frameLocator(floc).locator(firstloc).fill(text)
+        await this.page.frameLocator(floc).locator(lastloc).fill(text)
+        await this.page.frameLocator(floc).locator(midloc).fill(text)
+        await this.page.frameLocator(floc).locator(nickloc).fill(text)
+    }
+
+}
+

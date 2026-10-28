@@ -1,0 +1,29 @@
+Home Page
+Pim Page
+Add Employee Page
+Review Page
+
+Data Driven Framework + Page Object Model
+Home Page → Homepageclass + Homepage.json
+Pim Page → Pimpageclass + Pimpage.json
+Add Employee Page → Addemployeeclass + Addemployee.json
+Review Page → Reviewpageclass + Reviewpage.json
+
+-> Check the images (done)
+-> Print the text (done)
+-> Enter data into text boxes (done)
+-> Click on button (done)
+-> Mouse hover (done)
+-> Enter data into frame text boxes (done)
+-> Upload photo under the frame (done)
+-> Click on button under the frame (done)
+Page object model → pagedata(class).ts + pagelocator(locator).json
+
+
+
+
+
+ 
+
+
+

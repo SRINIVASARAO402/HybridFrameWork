@@ -1,0 +1,9 @@
+{
+    "XPimLogo":"div#companyLogoHeader",
+    "XPim":"li#pim",
+    "XAddEmployee":"//span[text()='Add Employee']"
+    
+}
+
+
+
